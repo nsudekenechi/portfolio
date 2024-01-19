@@ -1,7 +1,10 @@
+import { RouterProvider } from "react-router-dom"
+import "./assets/index.css"
+import { Routes } from "./routers/AllRoutes.jsx"
 function App() {
   return (
     <>
-      <h1>Home</h1>
+      <RouterProvider router={Routes} />
     </>
   )
 }
