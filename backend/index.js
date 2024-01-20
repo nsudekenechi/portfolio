@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
 // Api Routes
-app.use("/api/user", require("./router/user"))
+app.use("/api/user/login", require("./router/user"))
 // Connecting to server
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}`)
