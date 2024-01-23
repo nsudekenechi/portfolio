@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FaRegCircleUser } from "react-icons/fa6";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaApple } from "react-icons/fa";
@@ -8,7 +8,10 @@ import { FcGoogle } from "react-icons/fc";
 import { BsTwitterX } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import { POST } from '../../Api';
+import { Store } from '../../context/context';
 export const Login = () => {
+  const navigate = useNavigate()
+  const { setStore } = useContext(Store)
   const [inputs, setInputs] = useState({
     username: "",
     password: ""
@@ -21,10 +24,13 @@ export const Login = () => {
     e.preventDefault();
     try {
       const { data } = await POST("user/login", inputs);
-      sessionStorage.setItem("token", data);
+      sessionStorage.setItem("user", JSON.stringify(data));
+      // Storing User's Information Globally
+      setStore(prev => ({ ...prev, user: data }))
+      navigate("/admin/dashboard")
+
     } catch (err) {
       toast.error(err.response.data)
-      console.log(err)
     }
   }
   return (
