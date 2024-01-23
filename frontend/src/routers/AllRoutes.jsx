@@ -5,6 +5,7 @@ import { Dashboard } from "../pages/admin/Dashboard";
 import { DashboardContainer } from "../pages/admin/DashboardContainer";
 import { HomeContainer } from "../pages/HomeContainer";
 import { Home } from "../pages/Home";
+import { Skills } from "../pages/Skills";
 
 export const Routes = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export const Routes = createBrowserRouter([
             {
                 path: "",
                 element: <Home />
+            },
+            {
+                path: "skills",
+                element: <Skills />
             }
         ]
 

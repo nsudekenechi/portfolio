@@ -6,7 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 export const Home = () => {
     return (
-        <div className='text-white grid grid-cols-3 p-10'>
+        <div className='text-white grid grid-cols-3'>
             <div className='col-span-2'>
                 <h1 className=' text-[5rem] font-bold font-[poppins] mb-2'>Kenechi <br /> <span className='border-b border-b-blue-600 '>N</span>sude.</h1>
                 <h1 className='text-xl mb-10 font-[poppins]'>FullStack Developer</h1>
@@ -27,9 +27,8 @@ export const Home = () => {
             </div>
             <div className='font-[poppins]'>
                 <p className='text-2xl text-[#888] mb-10'>Hello, There 👋</p>
-                <p className='text-lg text-[#fff] leading-10'>
-                    With over 3 years of experience, I am a seasoned fullstack developer, with relentless pursuit for excellence and an insatiable curiosity for emerging technologies. 
-                    I possess expertise in the development of intuitive and user-friendly interfaces, dedicated to assisting businesses and individuals in the realization of their objectives.
+                <p className='leading-7'>My name is Kenechi Nsude, a fullstack developer with a flair for building innovative solutions for both individuals and large businesses.
+                    My passion for technology extends beyond coding, driving me to stay abreast of industry trends and consistently exceed client expectations. Let's collaborate to bring your digital vision to life.
                 </p>
             </div>
         </div>
