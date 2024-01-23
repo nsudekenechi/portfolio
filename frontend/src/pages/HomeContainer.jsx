@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { NavLink, Outlet } from "react-router-dom"
+import { Link, NavLink, Outlet } from "react-router-dom"
 import { SiCodecov } from "react-icons/si";
 import { TbBulb } from "react-icons/tb";
 import { MdOutlineCode } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
 import { RiHomeLine } from "react-icons/ri";
+import { ImProfile } from "react-icons/im";
 
 export const HomeContainer = () => {
 
@@ -29,6 +30,7 @@ export const HomeContainer = () => {
     }
 
   ])
+  const [cv, setCv] = useState(false);
 
   const handleShowLinks = (to) => {
     let newLinks = [...links].map(link => ({ ...link, isHovered: link.to == to ? true : false }));
@@ -71,6 +73,10 @@ export const HomeContainer = () => {
       <div className='p-5 md:col-span-9 md:p-10 font-[poppins]'>
         <Outlet />
       </div>
+      <a className='fixed w-[40px] h-[40px] bg-blue-600 top-[85%] right-5 rounded-full flex justify-center items-center download text-white hover:w-[100px]  hover: duration-700 hover:shadow-inputShadow' download={""} href={"./cv.pdf"} onMouseOver={() => setCv(true)} onMouseOut={() => setCv(false)}>
+        {!cv ? <ImProfile size={15} /> : <span className={`text-nowrap text-xs duration-1000 ${cv ? "opacity-100" : "opacity-0"}`}>Download Cv</span>}
+
+      </a>
     </div>
   )
 }

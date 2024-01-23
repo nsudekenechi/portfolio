@@ -193,8 +193,8 @@ export const Skills = () => {
                                 </div>
                             </div>
 
-                            <div className='pb-20 px-20'>
-
+                            <div className='py-20 px-20'>
+                                <div className='h-1 border-b border-b-[#333]'></div>
                             </div>
                         </div>
                     ))
