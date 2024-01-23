@@ -73,6 +73,34 @@ export const Skills = () => {
 
         ]
     }
+
+    const experiences = [
+        {
+            role: "Fullstack Developer",
+            company: "World Brain Technology",
+            img: "./worldBrain.png",
+            date: "Oct 2021 - Present",
+            roles: ["Implement RESTful APIs for seamless communication between the front-end and back-end components using Node and Express", "Design and optimize database schemas for efficient data storage and retrieval with mongoDB", "Collaborate  with UI/UX designers to implement visually appealing and intuitive interfaces.", "Developed user-friendly interfaces for a school portal using React, Tailwind, Framer Motion and other latest technologies."]
+        },
+        {
+            role: "Frontend Developer",
+            company: "FloxyTech",
+            img: "./floxyTech.png",
+            date: "Apr 2022 - Present",
+            roles: ["Collaborated with the design team to implement Figma designs", "Worked with backend developers to integrate frontend components with server-side logic", "Worked on the company's first official website, ensure responsiveness on major devices and accesibility on browers", ""]
+        },
+
+        {
+            role: "Web Development Tutor",
+            company: "Aptech Computer Education",
+            img: "./aptech.png",
+            date: "Jan 2022 - Present",
+            roles: ["Tutored Over 100 students in technologies like: Html, Css, Javascript, AngularJs, Microsoft Sql Server, UI/UX, OOP",
+                "Implemented teaching strategies to enhance students learning process and encourage a healthy competition among students",
+                "Successfully led and organized a quiz competition among students in the year 2023."
+            ]
+        }
+    ]
     return (
         <div className='md:pr-20 '>
 
@@ -141,18 +169,36 @@ export const Skills = () => {
             <h1 className='text-[#888] text-xl mb-10'>Professional Experience</h1>
 
             <div>
-                <div className="grid grid-cols-2 text-white font-Fira">
-                    <div className='grid grid-cols-12 gap-x-5 items-center'>
-                        <div className='col-span-2'>
-                            <img src="./worldBrain.png" className='object-cover object-center' alt="" />
+                {
+                    experiences.map((experience, index) => (
+                        <div key={index}>
+                            <div className="grid grid-cols-2 text-white font-Fira " >
+                                <div className='grid grid-cols-12 gap-x-5 '>
+                                    <div className='col-span-2'>
+                                        <img src={experience.img} className='object-cover object-center' alt="" />
+                                    </div>
+                                    <div className='col-span-10'>
+                                        <h1 className='text-lg mb-3'>{experience.role}</h1>
+                                        <p className='text-sm text-[#888]'>{experience.company}</p>
+                                        <p className='text-sm text-[#888]'>{experience.date}</p>
+                                    </div>
+                                </div>
+                                <div className=''>
+                                    <h1 className='text-[#888] mb-3'>Roles</h1>
+                                    <ul className='font-light flex flex-col gap-y-5'>
+                                        {
+                                            experience.roles.map((role, index) => <li key={index}>{role}</li>)
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className='pb-20 px-20'>
+
+                            </div>
                         </div>
-                        <div className='col-span-10'>
-                            <h1 className='text-lg'>Fullstack Developer</h1>
-                            <p className='text-sm text-[#888]'>World Brain Technology</p>
-                            <p className='text-sm text-[#888]'>Oct 2021 - Present</p>
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </div>
         </div>
     )
