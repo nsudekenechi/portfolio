@@ -183,15 +183,15 @@ export const Projects = () => {
                         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{opacity:1, y:0}} key={index}>
                             {
                                 <Link key={index} to={project.link} target='_blank' className=' block relative'>
-                                    <div className={`${(index + 1) % 2 == 0 ? "h-[200px] " : "h-[200px] "} rounded-lg overflow-hidden relative z-10 ${project.isHovered && "border-2 border-white"} mb-5`} onMouseOver={() => handleHover(project.title)} onMouseOut={handleOut}>
+                                    <div className={`h-[200px] rounded-lg overflow-hidden relative md:z-10 z-0 ${project.isHovered && "border-2 border-white"} mb-5`} onMouseOver={() => handleHover(project.title)} onMouseOut={handleOut}>
                                         <motion.img initial={{ y: "0%" }} animate={{ y: project.isHovered ? "100%" : "0%" }} src={project.img} alt="" className='object-cover object-center h-[100%] w-[100%]' />
-                                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: project.isHovered ? 1 : 0 }} className='bg-black/30 absolute w-[100%] h-[100%] top-0 z-10'>
+                                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: project.isHovered ? 1 : 0 }} className='bg-black/30 absolute w-[100%] h-[100%] top-0 z-0 md:z-10'>
 
                                         </motion.div>
                                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: project.isHovered ? 1 : 0 }} className='absolute w-[100%] h-[100%] top-0'>
                                             <video src={project.video} muted autoPlay loop className='w-[100%] h-[100%]'></video>
                                         </motion.div>
-                                        <div className='absolute bg-black/70 backdrop-blur-[2px] h-[25%] w-[100%] bottom-0 py-2 px-3 flex z-20'>
+                                        <div className='absolute bg-black/70 backdrop-blur-[2px] h-[25%] w-[100%] bottom-0 py-2 px-3 flex z-0 md:z-20'>
                                             <div className='flex items-center gap-x-2'>
                                                 <div className='h-[60%] w-[1px] border-l-[3px] rounded-full border-l-blue-500'></div>
                                                 <div>
