@@ -8,10 +8,10 @@ export const Home = () => {
     return (
         <motion.div  initial={{ y: 70, opacity: 0 }} exit={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{duration: 0.4}}>
             
-            <div className='text-white grid grid-cols-3'>
+            <div className='text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 <div className='col-span-2'>
-                    <h1 className=' text-[6rem] font-bold mb-2 font-Fira  '>Kenechi <br /> <span className='border-b border-b-blue-600 '>N</span>sude.</h1>
-                    <h1 className='text-xl mb-10 '>FullStack Developer</h1>
+                    <h1 className=' text-[5rem] md:text-[5rem] lg:text-[6rem] font-bold mb-2 font-Fira  '>Kenechi <br /> <span className='border-b border-b-blue-600 '>N</span>sude.</h1>
+                    <h1 className='text-xl md:mb-10 '>FullStack Developer</h1>
                     <div className='py-10 flex gap-x-5 items-center'>
                         <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 duration-700 hover:text-purple-800 text-sm'>
                             <FaGithub size={20} />

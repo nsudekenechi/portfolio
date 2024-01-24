@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, Outlet } from "react-router-dom"
+import { NavLink, Outlet, useLocation } from "react-router-dom"
 import { SiCodecov } from "react-icons/si";
 import { TbBulb } from "react-icons/tb";
 import { MdOutlineCode } from "react-icons/md";
@@ -33,6 +33,7 @@ export const HomeContainer = () => {
   const [cv, setCv] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const [hideNav, setHideNav] = useState(true);
+  const { pathname } = useLocation()
   const handleShowLinks = (to) => {
     let newLinks = [...links].map(link => ({ ...link, isHovered: link.to == to ? true : false }));
     setLinks(newLinks)
@@ -54,7 +55,11 @@ export const HomeContainer = () => {
     }
 
   }, [])
-  console.log(hideNav)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <div className='bg-black min-h-screen grid grid-cols-1 md:grid-cols-10 '>
       {/* Desktop Nav */}
