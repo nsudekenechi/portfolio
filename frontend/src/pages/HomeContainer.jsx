@@ -90,7 +90,7 @@ export const HomeContainer = () => {
         </div>
         <motion.div initial={{ scale: 0 }} animate={{ scale: hideNav ? 0 : 1 }} className="fixed px-3 md:px-8 flex flex-col items-center justify-center h-screen top-0 py-10 ">
 
-          <ul className='bg-[#fff]  w-[100%] rounded-full py-5 px-2 text-[#666] flex flex-col items-center gap-y-8 shadow-inputShadow '>
+          <ul className='bg-[#fff]  w-[100%] rounded-full py-5 px-2 text-[#666] flex flex-col items-center gap-y-8 md:shadow-inputShadow  shadow-lg'>
             {
               links.map((link, index) =>
                 <NavLink key={index} to={link.to} className={({ isActive }) => `${isActive ? 'text-white bg-blue-600 p-2 rounded-full' : ''} relative duration-100  z-30`} onMouseOver={() => handleShowLinks(link.to)} onMouseOut={() => handleHideLinks(link.to)}><link.icon className=' hover:rotate-[360deg] duration-1000' size={25} />
@@ -111,8 +111,8 @@ export const HomeContainer = () => {
           <Outlet />
         </div>
       </AnimatePresence>
-      <a className='fixed z-20 w-[40px] h-[40px] bg-blue-600 top-[85%] right-5 rounded-full flex justify-center items-center download text-white hover:w-[100px]  hover: duration-700 hover:shadow-inputShadow' download={""} href={"./cv.pdf"} onMouseOver={() => setCv(true)} onMouseOut={() => setCv(false)}>
-        {!cv ? <ImProfile size={15} /> : <span className={`text-nowrap text-xs duration-1000 ${cv ? "opacity-100" : "opacity-0"}`}>Download Cv</span>}
+      <a className='fixed z-20 w-[60px] h-[60px] md:w-[40px] md:h-[40px] bg-blue-600 top-[85%] right-5 rounded-full flex justify-center items-center download text-white hover:w-[100px]  hover:h-[40px]  duration-700 hover:shadow-inputShadow' download={""} href={"./cv.pdf"} onMouseOver={() => setCv(true)} onMouseOut={() => setCv(false)}>
+        {!cv ? <ImProfile size={15} /> : <span className={`text-nowrap text-sm md:text-xs duration-1000 ${cv ? "opacity-100" : "opacity-0"}`}>Download Cv</span>}
 
       </a>
     </div>
