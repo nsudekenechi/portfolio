@@ -75,7 +75,7 @@ export const HomeContainer = () => {
           <Outlet />
         </div>
       </AnimatePresence>
-      <a className='fixed w-[40px] h-[40px] bg-blue-600 top-[85%] right-5 rounded-full flex justify-center items-center download text-white hover:w-[100px]  hover: duration-700 hover:shadow-inputShadow' download={""} href={"./cv.pdf"} onMouseOver={() => setCv(true)} onMouseOut={() => setCv(false)}>
+      <a className='fixed z-20 w-[40px] h-[40px] bg-blue-600 top-[85%] right-5 rounded-full flex justify-center items-center download text-white hover:w-[100px]  hover: duration-700 hover:shadow-inputShadow' download={""} href={"./cv.pdf"} onMouseOver={() => setCv(true)} onMouseOut={() => setCv(false)}>
         {!cv ? <ImProfile size={15} /> : <span className={`text-nowrap text-xs duration-1000 ${cv ? "opacity-100" : "opacity-0"}`}>Download Cv</span>}
 
       </a>
