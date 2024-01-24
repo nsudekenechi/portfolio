@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from "framer-motion";
-import { SiAngularjs, SiAxios, SiBootstrap, SiCss3, SiExpress, SiFigma, SiHtml5, SiJavascript, SiMongodb, SiNextdotjs, SiNodedotjs, SiPhp, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiAngularjs, SiAxios, SiBootstrap, SiCss3, SiExpress, SiFigma, SiHtml5, SiJavascript, SiMongodb, SiMysql, SiNextdotjs, SiNodedotjs, SiPhp, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { TbBrandFramerMotion } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 
@@ -79,7 +79,7 @@ export const Projects = () => {
                 desc: "UCShomes is an assisted living website that offers a wide range of services and amenities designed to help  residents live independently and with dignity.",
                 img: "./ucshomes.png",
                 video: "./ucshomes.mp4",
-                link: "https://ultiblob.com/",
+                link: "https://www.ucshomes.com/",
                 stacks: [
                     {
                         title: "Bootstrap",
@@ -98,10 +98,10 @@ export const Projects = () => {
             },
             {
                 title: "Dopemind Studios",
-                desc: "Dopemind studios is a music selling website, that allows clients buy beats, samples, lyrics or songs.",
+                desc: "Dopemind studios is a music selling e-commerce website, that allows clients buy beats, samples, lyrics or songs.",
                 img: "./dopemind.png",
                 video: "./dopemind.mp4",
-                link: "https://ultiblob.com/",
+                link: "https://dopemindstudio.com/",
                 stacks: [
                     {
                         title: "Bootstrap",
@@ -114,7 +114,37 @@ export const Projects = () => {
                     {
                         title: "PHP",
                         icon: SiPhp
+                    },
+                    {
+                        title: "SQL",
+                        icon: SiMysql
                     }
+                ],
+
+            },
+            {
+                title: "Notie",
+                desc: "A note creating application that offers a range of rich features like creating, editing, deleting notes, recycle bin, speech-to-text, archiving and favoriting notes.",
+                img: "./notie.png",
+                video: "./notie.mp4",
+                link: "https://ultiblob.com/",
+                stacks: [
+                    {
+                        title: "React",
+                        icon: SiReact
+                    },
+                    {
+                        title: "Tailwind",
+                        icon: SiTailwindcss
+                    },
+                    {
+                        title: "Node",
+                        icon: SiNodedotjs
+                    },
+                    {
+                        title: "Mongo",
+                        icon: SiMongodb
+                    },
                 ],
 
             },
@@ -147,12 +177,12 @@ export const Projects = () => {
                 </p>
             </div>
             <div className='w-10 h-5 border-l border-b border-[#666] my-10'></div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 md:gap-x-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 md:gap-x-10 md:gap-y-5'>
                 {
                     projects.map((project, index) => (
-                        <div key={index}>
+                        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{opacity:1, y:0}} key={index}>
                             {
-                                <Link key={index} to={project.link} target='_blank' className='mb-10 block relative'>
+                                <Link key={index} to={project.link} target='_blank' className=' block relative'>
                                     <div className={`${(index + 1) % 2 == 0 ? "h-[200px] " : "h-[200px] "} rounded-lg overflow-hidden relative ${project.isHovered && "border-2 border-white"} mb-5`} onMouseOver={() => handleHover(project.title)} onMouseOut={handleOut}>
                                         <motion.img initial={{ y: "0%" }} animate={{ y: project.isHovered ? "100%" : "0%" }} src={project.img} alt="" className='object-cover object-center h-[100%] w-[100%]' />
                                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: project.isHovered ? 1 : 0 }} className='bg-black/30 absolute w-[100%] h-[100%] top-0 z-10'>
@@ -178,14 +208,14 @@ export const Projects = () => {
                                         </div>
                                     </div>
 
-                                    <motion.div initial={{ minHeight: "0px" }} animate={{ minHeight: project.isHovered ? "auto" : "0px" }} className={` overflow-hidden  ${project.isHovered ? "block" : "hidden"}`}>
+                                    <motion.div initial={{ minHeight: "0px" }} animate={{ minHeight: project.isHovered ? "auto" : "0px" }} className={` overflow-hidden mb-10 md:mb-0  ${project.isHovered ? "block" : "hidden"}`}>
                                         <motion.p initial={{ x: "-100%" }} animate={{ x: project.isHovered ? "0%" : "-100%" }} className='text-xs font-light' >
                                             {project.desc}
                                         </motion.p>
                                     </motion.div>
                                 </Link>
                             }
-                        </div>
+                        </motion.div>
                     ))
                 }
 
