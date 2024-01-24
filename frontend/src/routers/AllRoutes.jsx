@@ -6,6 +6,7 @@ import { DashboardContainer } from "../pages/admin/DashboardContainer";
 import { HomeContainer } from "../pages/HomeContainer";
 import { Home } from "../pages/Home";
 import { Skills } from "../pages/Skills";
+import { Projects } from "../pages/Projects";
 
 export const Routes = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ export const Routes = createBrowserRouter([
             {
                 path: "skills",
                 element: <Skills />
+            },
+            {
+                path: "projects",
+                element: <Projects />
             }
         ]
 

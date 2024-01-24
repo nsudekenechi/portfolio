@@ -190,7 +190,7 @@ export const Skills = () => {
                                         <h1 className='text-[#888] mb-3'>Roles</h1>
                                         <ul className='font-light flex flex-col gap-y-5'>
                                             {
-                                                experience.roles.map((role, index) => <motion.li key={index} initial={{ y: 50, opacity:0 }} whileInView={{ y: 0, opacity:1 }}>{role}</motion.li>)
+                                                experience.roles.map((role, index) => <motion.li key={index} initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>{role}</motion.li>)
                                             }
                                         </ul>
                                     </div>
