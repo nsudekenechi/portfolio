@@ -8,18 +8,18 @@ export const Home = () => {
     return (
         <div className='text-white grid grid-cols-3'>
             <div className='col-span-2'>
-                <h1 className=' text-[5rem] font-bold font-[poppins] mb-2'>Kenechi <br /> <span className='border-b border-b-blue-600 '>N</span>sude.</h1>
-                <h1 className='text-xl mb-10 font-[poppins]'>FullStack Developer</h1>
-                <div className='py-10 flex gap-x-5 items-center [poppins]'>
-                    <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 duration-700 hover:text-purple-800'>
+                <h1 className=' text-[6rem] font-bold mb-2 font-Fira  '>Kenechi <br /> <span className='border-b border-b-blue-600 '>N</span>sude.</h1>
+                <h1 className='text-xl mb-10 '>FullStack Developer</h1>
+                <div className='py-10 flex gap-x-5 items-center'>
+                    <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 duration-700 hover:text-purple-800 text-sm'>
                         <FaGithub size={20} />
                         <span className='text-[#777]'>GitHub</span>
                     </Link>
-                    <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 hover:text-blue-400 duration-700'>
+                    <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 hover:text-blue-400 duration-700 text-sm'>
                         <FaLinkedinIn size={20} />
                         <span className='text-[#777]'>LinkedIn</span>
                     </Link>
-                    <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 hover:text-blue-600 duration-700 '>
+                    <Link className='flex gap-x-2 items-center hover:-translate-y-0.5 hover:text-blue-600 duration-700  text-sm'>
                         <FaTwitter size={20} />
                         <span className='text-[#777]'>Twitter</span>
                     </Link>

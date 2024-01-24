@@ -119,7 +119,7 @@ export const Skills = () => {
 
             <h1 className='text-[#888] text-xl mb-10'>Skills</h1>
 
-            <div className='grid grid-cols-1 md:grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-y-10'>
                 <div className='text-white'>
                     <h1 className='mb-5'>Languages</h1>
                     {
@@ -133,7 +133,7 @@ export const Skills = () => {
                 </div>
                 <div className='text-white col-span-2'>
                     <h1 className='mb-5'>Frameworks & Others</h1>
-                    <div className='grid grid-cols-2 md:grid-cols-3 gap-x-20'>
+                    <div className='grid grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-5'>
                         <div>
                             {
                                 skills.frameworks.map((skill, index) => index + 1 <= 4 && <div className='flex items-center gap-x-3 text-sm mb-5' key={index}>
@@ -172,12 +172,12 @@ export const Skills = () => {
                 {
                     experiences.map((experience, index) => (
                         <div key={index}>
-                            <div className="grid grid-cols-2 text-white font-Fira " >
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 text-white font-Fira " >
                                 <div className='grid grid-cols-12 gap-x-5 '>
-                                    <div className='col-span-2'>
+                                    <div className='col-span-4 md:col-span-2'>
                                         <img src={experience.img} className='object-cover object-center' alt="" />
                                     </div>
-                                    <div className='col-span-10'>
+                                    <div className=' col-span-8 md:col-span-10'>
                                         <h1 className='text-lg mb-3'>{experience.role}</h1>
                                         <p className='text-sm text-[#888]'>{experience.company}</p>
                                         <p className='text-sm text-[#888]'>{experience.date}</p>

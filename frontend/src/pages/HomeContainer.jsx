@@ -58,7 +58,7 @@ export const HomeContainer = () => {
               links.map((link, index) =>
                 <NavLink key={index} to={link.to} className={({ isActive }) => `${isActive ? 'text-white bg-blue-600 p-2 rounded-full' : 'hover:text-white '} relative duration-100`} onMouseOver={() => handleShowLinks(link.to)} onMouseOut={() => handleHideLinks(link.to)}><link.icon className=' hover:rotate-[360deg] duration-1000' size={20} />
                   <div className={'overflow-hidden  absolute top-[50%] translate-y-[-50%] left-[50px] '}>
-                    <p className={`${link.isHovered ? "translate-x-[0%] opacity-100" : "translate-x-[-100%] opacity-0"} text-xs text-white capitalize duration-500 font-[poppins]`}>{link.to ? link.to : "home"}
+                    <p className={`${link.isHovered ? "translate-x-[0%] opacity-100 bg-blue-600 py-1 px-3 md:bg-transparent md:py-0 md:px-0 rounded-full" : "translate-x-[-100%] opacity-0"} text-xs text-white capitalize duration-500 font-[poppins]`}>{link.to ? link.to : "home"}
                     </p>
                   </div>
                 </NavLink>
