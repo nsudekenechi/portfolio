@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Link, NavLink, Outlet } from "react-router-dom"
+import React, { useEffect, useState } from 'react'
+import { NavLink, Outlet } from "react-router-dom"
 import { SiCodecov } from "react-icons/si";
 import { TbBulb } from "react-icons/tb";
 import { MdOutlineCode } from "react-icons/md";
-import { BiCategory } from "react-icons/bi";
 import { RiHomeLine } from "react-icons/ri";
 import { ImProfile } from "react-icons/im";
-import { motion, AnimatePresence } from "framer-motion"
+import { MdMail } from "react-icons/md";
+import { AnimatePresence } from "framer-motion"
 export const HomeContainer = () => {
 
   const [links, setLinks] = useState([
@@ -25,8 +25,8 @@ export const HomeContainer = () => {
 
     },
     {
-      icon: BiCategory,
-      to: "category",
+      icon: MdMail,
+      to: "contact",
     }
 
   ])
@@ -66,12 +66,13 @@ export const HomeContainer = () => {
             }
           </ul>
 
-          <div className='flex justify-center items-center text-white w-10 h-10 bg-blue-500 rounded-full text-lg'>
+          <div className='flex justify-center items-center text-white w-10 h-10 bg-blue-500  text-lg rounded-full overflow-hidden'>
+            <img src="./kenechi.jpg" alt="" className='w-[100%] h-[100%] object-cover scale-125 '/>
           </div>
         </div>
       </nav>
       <AnimatePresence>
-        <div className='p-5 md:col-span-9 md:p-10 font-[poppins]'>
+        <div className='p-5 md:col-span-9 md:p-10 md:pr-20  font-[poppins]'>
           <Outlet />
         </div>
       </AnimatePresence>

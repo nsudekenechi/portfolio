@@ -104,7 +104,7 @@ export const Skills = () => {
     ]
     return (
         <motion.div initial={{ y: 70, opacity: 0 }} exit={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4 }}>
-            <div className='md:pr-20 '>
+         
 
                 <h1 className='text-[#888] text-xl mb-10'>About me</h1>
                 <div className='flex flex-col gap-y-5 text-lg text-[#fff]  leading-7 font-light'>
@@ -203,7 +203,7 @@ export const Skills = () => {
                         ))
                     }
                 </div>
-            </div>
+  
         </motion.div>
     )
 }
