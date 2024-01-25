@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { FaUser } from "react-icons/fa";
+import { FaRegCircleUser } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom"
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -37,7 +37,7 @@ export const Login = () => {
     <div className='bg-black min-h-screen flex justify-center items-center'>
       <div className='bg-[#111] outline-[#222]   w-[40%]  outline p-10 rounded-xl text-white flex  flex-col items-center'>
         <div>
-          <FaUser size={20} />
+          <FaRegCircleUser size={20} />
         </div>
 
         <h1 className="mt-3 mb-1 text-2xl font-Fira">Welcome Back</h1>
