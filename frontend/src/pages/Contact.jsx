@@ -49,11 +49,11 @@ export const Contact = () => {
           </p>
           <p className='text-3xl relative'>
             Let's Get In Touch
-            <motion.div 
-            initial={{ height: "100%", width: "100%" }} 
-            animate={{ width: "0%" }}
-            transition={{delay: 0.5, duration: 0.5, ease:"anticipate"}}
-             className="absolute  bg-black top-0 right-0"></motion.div>
+            <motion.div
+              initial={{ height: "100%", width: "100%" }}
+              animate={{ width: "0%" }}
+              transition={{ delay: 0.5, duration: 0.5, ease: "anticipate" }}
+              className="absolute  bg-black top-0 right-0"></motion.div>
           </p>
 
         </div>
@@ -64,21 +64,24 @@ export const Contact = () => {
               <div className='mb-2 '>
                 <label htmlFor="" className='text-sm'>Name</label>
               </div>
-              <input type="text" className='text-sm  w-[100%] py-3 px-5 outline-none  bg-[#222] rounded-md' required name='from_name' onChange={handleChange} value={inputs.from_name} />
+              <input type="text" className='text-sm  w-[100%] py-3 px-5  focus:outline outline-blue-600   bg-[#222] rounded-md'
+                required autoComplete='off'
+                name='from_name' onChange={handleChange} value={inputs.from_name} />
             </div>
 
             <div>
               <div className='mb-2 '>
                 <label htmlFor="" className='text-sm'>Email</label>
               </div>
-              <input type="text" className='text-sm  w-[100%] py-3 px-5 outline-none  bg-[#222] rounded-md' required name='from_email' onChange={handleChange} value={inputs.from_email} />
+              <input type="email" className='text-sm  w-[100%] py-3 px-5  focus:outline outline-blue-600   bg-[#222] rounded-md'
+                required autoComplete='off'   name='from_email' onChange={handleChange} value={inputs.from_email} />
             </div>
 
             <div className='md:col-span-2 mb-5'>
               <div className='mb-2 flex items-center gap-x-2'>
                 <label htmlFor="" className='text-sm'>Send me a message</label>
               </div>
-              <textarea name="message" onChange={handleChange} id="" className='text-sm w-[100%] bg-[#222]  resize-none outline-none py-3 px-5 rounded-md h-[300px]' required value={inputs.message}>
+              <textarea name="message" onChange={handleChange} id="" className='text-sm w-[100%] bg-[#222]  resize-none py-3 px-5 rounded-md h-[300px] focus:outline outline-blue-600 ' required value={inputs.message}>
 
 
               </textarea>

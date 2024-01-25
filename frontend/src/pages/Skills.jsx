@@ -132,7 +132,7 @@ export const Skills = () => {
                         I possess expertise in the development of intuitive and user-friendly interfaces, dedicated to assisting businesses and individuals in the realization of their objectives.
                     </p>
 
-                    <p>As a seasoned fullstack developer, I have an expertise level in both Javascript and PHP,  allowing me to build complex and secure systems while providing user-centric interface.   My distinguished track record, (as you will see in the <Link to={"/projects"}>Projects Section</Link>) for building innovative solutions for individuals, small and large business entities and various stake holders.</p>
+                    <p>As an experienced developer, I have an expertise level in both Javascript and PHP,  allowing me to build complex and secure systems while providing user-centric interface.   My distinguished track record, (as you will see in the <Link to={"/projects"}>Projects Section</Link>) for building innovative solutions for individuals, small and large business entities and various stake holders.</p>
                 </motion.div>
             </div>
 
