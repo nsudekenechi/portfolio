@@ -213,7 +213,7 @@ export const Projects = () => {
                                             <div className='flex items-center gap-x-2'>
                                                 <div className='h-[60%] w-[1px] border-l-[3px] rounded-full border-l-blue-500'></div>
                                                 <div>
-                                                    <h1 className='text-xs  '>{project.title}</h1>
+                                                    <h1 className='text-sm md:text-xs  '>{project.title}</h1>
                                                     <div className="flex gap-x-1 text-[10px] font-light">
                                                         {
                                                             project.stacks.map((stack, index) => <span className='flex items-center gap-x-1' key={index}>{stack.title} <stack.icon /></span>)
@@ -227,7 +227,7 @@ export const Projects = () => {
                                     </div>
 
                                     <motion.div initial={{ minHeight: "0px" }} animate={{ minHeight: project.isHovered ? "auto" : "0px" }} className={` overflow-hidden mb-10 md:mb-0  ${project.isHovered ? "block" : "hidden"}`}>
-                                        <motion.p initial={{ x: "-100%" }} animate={{ x: project.isHovered ? "0%" : "-100%" }} className='text-xs font-light' >
+                                        <motion.p initial={{ x: "-100%" }} animate={{ x: project.isHovered ? "0%" : "-100%" }} className='text-sm md:text-xs font-light' >
                                             {project.desc}
                                         </motion.p>
                                     </motion.div>

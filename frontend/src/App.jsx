@@ -7,8 +7,7 @@ import { Routes } from "./routers/AllRoutes.jsx"
 import { useState } from "react";
 function App() {
   const [store, setStore] = useState({
-    user: sessionStorage.getItem("user") ? sessionStorage.getItem("user") : "",
-    showNav: false
+    user: sessionStorage.getItem("user") ? sessionStorage.getItem("user") : ""
   })
   return (
     <>
