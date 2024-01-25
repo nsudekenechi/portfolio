@@ -141,8 +141,8 @@ export const Skills = () => {
 
             <h1 className='text-[#888] text-xl mb-10'>Skills</h1>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-y-10'>
-                <div className='text-white'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-y-10 '>
+                <div className='text-white overflow-hidden'>
                     <h1 className='mb-5'>Languages</h1>
                     {
                         skills.languages.map((skill, index) => <motion.div className='flex items-center gap-x-3 text-sm mb-5' key={index} initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
