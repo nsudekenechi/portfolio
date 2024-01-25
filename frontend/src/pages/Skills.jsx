@@ -155,7 +155,7 @@ export const Skills = () => {
                 </div>
                 <div className='text-white col-span-2'>
                     <h1 className='mb-5'>Frameworks & Others</h1>
-                    <div className='grid grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-5'>
+                    <div className='grid grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-5 overflow-hidden'>
                         <div>
                             {
                                 skills.frameworks.map((skill, index) => index + 1 <= 4 && <motion.div className='flex items-center gap-x-3 text-sm mb-5' key={index} initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }}
