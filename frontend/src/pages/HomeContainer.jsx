@@ -43,7 +43,7 @@ export const HomeContainer = () => {
     let newLinks = [...links].map(link => ({ ...link, isHovered: false }));
     setLinks(newLinks);
   }
-
+  
   useEffect(() => {
     setLinks(prev => prev.map(link => ({ ...link, isHovered: false })))
     window.onscroll = (e) => {
@@ -58,6 +58,7 @@ export const HomeContainer = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    setHideNav(true);
   }, [pathname])
 
   return (
