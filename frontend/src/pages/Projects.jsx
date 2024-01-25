@@ -166,21 +166,39 @@ export const Projects = () => {
     return (
         <motion.div initial={{ y: 70, opacity: 0 }} exit={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4 }} className='text-white'>
 
-            <h1 className='text-[#888] text-xl mb-10'>Projects</h1>
-            <div className='flex flex-col gap-y-5 text-lg text-[#fff]  leading-7 font-light'>
-                <p >
-                    Welcome to the portfolio of a passionate Fullstack Developer, where innovation meets functionality. With a robust foundation in both front-end and back-end technologies, I bring a wealth of expertise to the digital realm.
-                </p>
+            <h1 className='text-[#888] text-xl mb-10 overflow-hidden'>
+                <motion.p initial={{ opacity: 0, translateX: "20%" }}
+                    animate={{ opacity: 1, translateX: "0%" }}
+                    transition={{
+                        delay: 0.2,
+                        duration: 0.6,
+                        ease: "anticipate"
+                    }}>
+                    Projects
+                </motion.p>
+            </h1>
+            <div className='overflow-hidden'>
+                <motion.div className='flex flex-col gap-y-5 text-lg text-[#fff]  leading-7 font-light' initial={{ opacity: 0, translateY: "-30%" }}
+                    animate={{ opacity: 1, translateY: "0%" }}
+                    transition={{
+                        delay: 0.25,
+                        duration: 0.4,
+                        ease: "easeInOut"
+                    }}>
+                    <p >
+                        Welcome to the portfolio of a passionate Fullstack Developer, where innovation meets functionality. With a robust foundation in both front-end and back-end technologies, I bring a wealth of expertise to the digital realm.
+                    </p>
 
-                <p>
-                    Explore a curated collection of projects that showcase my proficiency in crafting seamless user experiences and robust server-side solutions. From dynamic web applications to scalable APIs, each project reflects a commitment to cutting-edge technology and a passion for problem-solving.
-                </p>
+                    <p>
+                        Explore a curated collection of projects that showcase my proficiency in crafting seamless user experiences and robust server-side solutions. From dynamic web applications to scalable APIs, each project reflects a commitment to cutting-edge technology and a passion for problem-solving.
+                    </p>
+                </motion.div>
             </div>
             <div className='w-10 h-5 border-l border-b border-[#666] my-10'></div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 md:gap-x-10 md:gap-y-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 md:gap-x-10 md:gap-y-5 overflow-hidden'>
                 {
                     projects.map((project, index) => (
-                        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{opacity:1, y:0}} key={index}>
+                        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} key={index}>
                             {
                                 <Link key={index} to={project.link} target='_blank' className=' block relative'>
                                     <div className={`h-[200px] rounded-lg overflow-hidden relative md:z-10 z-0 ${project.isHovered && "border-2 border-white"} mb-5`} onMouseOver={() => handleHover(project.title)} onMouseOut={handleOut}>

@@ -120,12 +120,12 @@ export const Skills = () => {
             </h1>
             <div 
                 className=' overflow-hidden'>
-                <motion.div className='flex flex-col gap-y-5 text-lg text-[#fff]  leading-7 font-light' initial={{ opacity: 0, translateY: "40%" }}
+                <motion.div className='flex flex-col gap-y-5 text-lg text-[#fff]  leading-7 font-light' initial={{ opacity: 0, translateY: "-30%" }}
                     animate={{ opacity: 1, translateY: "0%" }}
                     transition={{
-                        delay: 0.4,
-                        duration: 0.6,
-                        ease: "anticipate"
+                        delay: 0.25,
+                        duration: 0.4,
+                        ease: "easeInOut"
                     }}>
                     <p >
                         With over 3 years of experience, I am a seasoned fullstack developer, with relentless pursuit for excellence and an insatiable curiosity for emerging technologies.

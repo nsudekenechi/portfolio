@@ -30,12 +30,33 @@ export const Contact = () => {
   }
   return (
     <motion.div initial={{ y: 70, opacity: 0 }} exit={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4 }} className='text-white'>
-      <h1 className='text-[#888] text-xl mb-10'>Contact me</h1>
+      <h1 className='text-[#888] text-xl mb-10 overflow-hidden'>
+        <motion.p
+          initial={{ opacity: 0, translateX: "20%" }}
+          animate={{ opacity: 1, translateX: "0%" }}
+          transition={{
+            delay: 0.2,
+            duration: 0.3,
+            ease: "anticipate"
+          }}>
+          Contact me
+        </motion.p>
+      </h1>
       <div className='flex flex-col gap-y-5 text-lg text-[#fff]  leading-7 font-light'>
-        <p className='text-4xl font-extrabold'>
-          I strive for the best in everything I create.
-        </p>
-        <p className='text-3xl'>Let's Get In Touch</p>
+        <div className='relative'>
+          <p className='text-4xl font-extrabold mb-4'>
+            I strive for the best in everything I create.
+          </p>
+          <p className='text-3xl relative'>
+            Let's Get In Touch
+            <motion.div 
+            initial={{ height: "100%", width: "100%" }} 
+            animate={{ width: "0%" }}
+            transition={{delay: 0.5, duration: 0.5, ease:"anticipate"}}
+             className="absolute  bg-black top-0 right-0"></motion.div>
+          </p>
+
+        </div>
         <div className='w-10 h-5 border-l border-b border-[#666] my-10'></div>
         <form action="" className='' onSubmit={sendEmail}>
           <div className="grid grid-cols-1  md:grid-cols-2 gap-x-10 gap-y-10">
